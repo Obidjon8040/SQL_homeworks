@@ -17,3 +17,5 @@
 9.Create table Departments (DepartmentID int Primary key, departmentname varchar(50))
 10.Truncate table departments
 
+
+
