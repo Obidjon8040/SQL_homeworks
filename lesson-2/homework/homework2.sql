@@ -16,6 +16,18 @@
 8.Alter table employees alter column salary float
 9.Create table Departments (DepartmentID int Primary key, departmentname varchar(50))
 10.Truncate table departments
+--Intermediate-Level Tasks 
+11.Insert into Departments values (1, 'Moliya'), (2, 'Bank'), 
+               (3, 'buhgalter'), (4, 'kassa'), (5, 'monitoring')
+  Select * from Departments
+12.Update Employees set department='management'
+  where salary>5000
+13.Truncate table employees
+14.Alter table employees Drop column Department
+15.Exec sp_rename 'employees', 'StaffMembers'
+16.Drop table Departments
+
+
 
 
 
