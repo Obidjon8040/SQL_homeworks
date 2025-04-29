@@ -18,5 +18,29 @@
   CREATE TABLE Customers (
     CustomerID INT IDENTITY(1,1) PRIMARY KEY,
     CustomerName VARCHAR(20));  CustomerID 1 dan boshlaydi va har safar 1 qoshib boradi. 
+-- Medium-Level Tasks
+ 10 Bulk insert Products from 'C:\date\File.txt' 
+ with (firsrow=2,
+       fieldterminator=',',
+       rowterminator='\n') 
+11. CREATE TABLE PRODUCTS 
+                      (ProductID int primary key, 
+                       ProductName varchar(50), 
+                       Price Decimal(10,2))
+    Create table Categories (
+                        CategoryID INT Primary key, 
+						CategoryName varchar(20) unique,
+						productid int foreign key references products(Productid))
+ 12. PRIMARY KEY- bu jadvaldagi ustun soni takrorlanmas bolishini taminlaydi va bir vaqtning o`zida null va unique shartlarini qanoatlantiradi, odatda ID raqamlar uchun ishlatiladi
+     Unique key - bu ham ustundagi qiymatlar takrorlanmas bolishi kerak Null qiymatga ruxsat beradi, bir jadvalda bir nechta unique key bolishi mumkin. 
+ 13. CREATE TABLE PRODUCTS 
+                     (ProductID int primary key, 
+                     ProductName varchar(50), 
+                     Price Decimal(10,2) check(price>0)) 
+   check(price>0) bu shart maxsulot narxini 0 ga teng bolmaslik shartini beradi
+14. Alter table products add stock int not null default 1 
+15. select productid, productname, isnull(price, 0) as product from PRODUCTS
+16. FOREIGN KEY cheklovi — SQL Serverdagi ma’lumotlar orasidagi bog‘liqlikni ta’minlovchi vosita, FOREIGN KEY bir jadvaldagi ustunni boshqa jadvaldagi PRIMARY KEY yoki UNIQUE ustun bilan bog‘laydi.
+    jadvallar o`rtasidagi manoli aloqani saqlay.
 
   
