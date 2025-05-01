@@ -24,3 +24,32 @@
 9.select distinct Category, ProductName from Products
 10. select distinct Category, ProductName from Products
     order by ProductName desc
+--Medium-Level Tasks
+11. Select top 10 * from Products   -- top 10 - 10 maxsulotni chiqarib beradi bizga, 
+    order by price desc             --Order by Price Desc bu Price ustunini kamayish tartibida tartiblaydi.
+12. Select coalesce(FirstName, Lastname) as Fulname from Employees   -- Fulname bu coalesce da xosil blgan natijani ko`rsatadigan yangi ustun nomi
+13. Select distinct Category, Price from Products
+14. select * from Employees
+    where (age between 30 and 40) or (Departmentname='Marketing') ---age between 30 and 40 - yoshi 30 dan 40 oraligidagi barcha xodimlar chiqadi. Departmentname='Marketing' - yoshidan qattiy nazar marketing bo‘limidagi barcha xodimlar chiqadi 
+15. select * from Employees
+    order by salary desc                        -- order by salary desc - salary ustunini kamayish tartibida tartiblaydi
+    offset 11 rows fetch next 20 rows only      --  offset 11 rows fetch next 20 rows only  - fetch next 20 rows only - bu keyingi 20 ta yozuvni chiqaradi
+16. select * from Products
+    where Price<=1000 and StockQuantity>50       -- where Price<=1000 and StockQuantity>50  shu malumot boyicha filtirlaydi va
+    order by StockQuantity asc                   --order by StockQuantity asc o`sish tartibida tartiblaydi
+17. select * from Products
+    where ProductName like '%e%'
+18. select * from Employees
+    where DepartmentName in('HR', 'IT', 'Finance')
+19. select * from Customers
+    order by city asc, PostalCode desc
+
+
+
+
+
+
+
+
+
+
