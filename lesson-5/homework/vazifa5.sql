@@ -25,13 +25,13 @@
    select * from Products_Discounted
 10. select ProductName, price,
                           IIF(Price>1000, 'Expensive', 'Affordable') as Natija
-	            					  from Products
+	                  from Products
 11. select * from Employees
                   where age<25 and Salary>6000
 12. Update Employees 
                 set salary=salary*1.10
 				        where DepartmentName='HR' 
-				        or EmployeeID=5
+				        or EmployeeID=5;
 
 
 
