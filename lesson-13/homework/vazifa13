@@ -31,8 +31,25 @@
     AND DeliveryState = 'tx'
 3. select STRING_AGG(string, ' ') as result from DMLTable
 4. select concat(firstname, ' ', lastname) as fullname from Employees
-  where concat(firstname, ' ', lastname) like '%a%a%a%'
-5. 
+   where concat(firstname, ' ', lastname) like '%a%a%a%'
+5. select departmentname, COUNT(*) as totatemployees, 
+                          sum(case when datediff(year, HIREDATE, GETDATE())>3 then 1 else 0 end) as years3, 
+					                     cast(100.0 * sum(case when datediff(year, HIREDATE, GETDATE())>3 then 1 else 0 end) / COUNT(*) as Decimal(5,2)) as percent3years
+			from Employees 
+   group by departmentname
+6. select  * from Personal
+    where missioncount=(select max(missioncount) from Personal)
+
+--Difficult Tasks
+
+
+
+
+
+
+
+
+
 
 
 
