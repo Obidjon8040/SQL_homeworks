@@ -32,5 +32,6 @@
    from Employees
    WHERE DATEDIFF(YEAR, Hire_Date, GETDATE()) > 10
    AND DATEDIFF(YEAR, Hire_Date, GETDATE()) < 15
-
+---Medium Tasks
+1. 
   
